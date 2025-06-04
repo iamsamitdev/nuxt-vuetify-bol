@@ -26,7 +26,7 @@ export default() => {
 
     // Get All Products
     const getProducts = async (page: number, pagesize: number) => {
-        return fetchWithTokenCheck<any>(`${STRAPI_URL}/products`, {
+        return fetchWithTokenCheck<any>(`${STRAPI_URL}/products?populate=*`, {
             method: 'GET',
             headers: headers,
             cache: 'no-cache'
