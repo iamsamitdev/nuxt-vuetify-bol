@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+const { data } = await useFetch('/api/hello')
+
 // Use locale composable
 const { currentLocale, changeLanguage } = useLocale()
 
@@ -16,8 +18,6 @@ const token = useCookie('token', {
 
 // ตรวสอบความถูกต้องของฟอร์ม
 const { ruleRequired, ruleEmail, rulePassLen} = useFormRules()
-
-
 
 // ฟังก์ชันสำหรับส่งข้อมูล
 const submitForm = async () => {
@@ -67,6 +67,7 @@ const submitForm = async () => {
     <v-container class="fill-height" fluid>
         
         <v-row align="center" justify="center" class="login-row">
+             <h1>{{  data?.name  }}</h1>
             <v-col cols="12" md="6" class="pa-0 image-col">
                 <div class="login-image" />
             </v-col>

@@ -1,4 +1,7 @@
 <script setup lang="ts">
+    // Use locale composable
+    const { currentLocale, changeLanguage } = useLocale()
+
     const logout = () => {
         // get token from cookie
         const token = useCookie('token')
