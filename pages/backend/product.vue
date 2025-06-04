@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import useStrapiApi from '~/composables/useStrapiApi'
+
+    // Get Product from api
+    const { data: products } = await useStrapiApi().getProducts(1, 25)
+    console.log('Products:', products)
 
     const logout = () => {
         // get token from cookie
