@@ -4,6 +4,10 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   ssr: true,
+  routeRules: {
+    '/backend/**': { ssr: false }, // Disable SSR for backend routes
+    '/': { ssr: true }, // Enable SSR for the home page
+  },
   css: [
     "@/assets/scss/style.scss"
   ],
