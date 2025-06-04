@@ -1,7 +1,4 @@
 <script setup lang="ts">
-    definePageMeta({
-        layout: 'backend',
-    })
 
     const logout = () => {
         // get token from cookie
