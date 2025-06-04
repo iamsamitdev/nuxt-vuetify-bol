@@ -25,6 +25,9 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    '@nuxtjs/i18n',
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error
@@ -37,8 +40,14 @@ export default defineNuxtConfig({
         UserAgent: '*',
         Disallow: '',
       }
-    ]
+    ],
   ],
+  piniaPersistedstate: {
+    storage: 'localStorage'
+  },
+  i18n: {
+    vueI18n: './i18n.config.ts'
+  },
   runtimeConfig: {
     public: {
        strapi: {

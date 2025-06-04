@@ -1,0 +1,9 @@
+{
+    "hello": "Hello, How are you ?",
+    "loginForm": "Login Form",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Submit",
+    "googleLogin": "Sign in with Google",
+    "facebookLogin": "Sign in with Facebook"
+}

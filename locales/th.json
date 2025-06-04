@@ -1,0 +1,9 @@
+{
+    "hello": "สวัสดี, คุณเป็นอย่างไรบ้าง ?",
+    "loginForm": "แบบฟอร์มเข้าสู่ระบบ",
+    "email": "อีเมล",
+    "password": "รหัสผ่าน",
+    "submit": "ส่ง",
+    "googleLogin": "เข้าสู่ระบบด้วย Google",
+    "facebookLogin": "เข้าสู่ระบบด้วย Facebook"
+}

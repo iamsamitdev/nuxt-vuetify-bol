@@ -13,6 +13,7 @@
 
 <template>
     <div>
+        <h1>{{ $t('hello') }}</h1>
         <h1>Dashboard</h1>
         <p>Welcome to the dashboard!</p>
         <p>This is a placeholder for your dashboard content.</p>

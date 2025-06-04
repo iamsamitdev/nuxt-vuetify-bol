@@ -26,14 +26,14 @@ import useStrapiApi from '~/composables/useStrapiApi'
         <p>List of products:</p>
         <ul>
             <div v-for="product in products?.data" :key="product.id">
-                <img :src="`${STRAPI_URL_ROOT}${product.image[0].url}`" alt="">
-                <h2>{{ product.title }}</h2>
-                <p>{{ product.price }}</p>
-                <p>{{ product.qty }}</p>
+                <img :src="`${STRAPI_URL_ROOT}${product.image[0].url}`" width="100" height="100" alt="Product Image">
+                <h2>Name: {{ product.title }}</h2>
+                <p>Price: {{ product.price }}</p>
+                <p>Qty: {{ product.qty }}</p>
             </div>
         </ul>
         <p v-if="!products || products.length === 0">No products found.</p>
-        <p v-else>Total products: {{ products.length }}</p>
+        <p v-else>Total products: {{ products.data.length }}</p>
         <!-- Logout button -->
         <VBtn color="primary" class="mt-4" @click="logout">Logout</VBtn>
     </div>
